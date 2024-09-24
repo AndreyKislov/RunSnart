@@ -1,0 +1,148 @@
+@media(max-width:992px){
+  .container{
+    width: 790px;
+  }
+  .logo{
+    &__phone{
+      &-button{
+        width: 13vw;
+        height: 2.5vw;
+      }
+    }
+  }
+}
+
+@media(max-width:768px){
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .container{
+    width: 700px;
+  }
+  html{
+    font-size: 8px
+  }
+  .logo{
+    &__text{
+      font-size: 1.3rem;
+      span{
+        font-size: 1.8rem;
+      }
+    }
+    &__phone{
+      &-button{
+        width: 15vw;
+        height: 2.5vw;
+      }
+    }
+  }
+  .selection{
+    &__button{
+      height: 4.5vw;
+    }
+    &__icons{
+      &-wrapper{
+        img{
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .advantages{
+    font-size: 12px;
+    &__wrapper{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+  }
+}
+
+@media(max-width:576px){
+  .container{
+    width: 540px;
+  }
+  .logo{
+    &__phone{
+      &-button{
+        width: 20vw;
+        height: 4.5vw;
+      }
+    }
+  }
+  .selection{
+    &__button{
+      height: 6.5vw;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container{
+    width: 90%;
+  }
+  .logo{
+    &__phone{
+      a{
+        display: none;
+      }
+      &-button{
+        width: 25vw;
+        height: 6vw;
+      }
+    }
+    &__text{
+      display: none;
+    }
+  }
+  .selection{
+    align-items: center;
+    &__title-big{
+      margin-left: 0;
+    }
+    &__title{
+      margin-left: 0;
+    }
+    &__icons{
+      margin-left: 0;
+    }
+    &__button{
+      margin-left: 0;
+      width: 35vw;
+      height: 10vw;
+    }
+  }
+}
+
+@media(max-width:375px){
+  .logo{
+    &__icons{
+      margin: 0 auto;
+    }
+    &__phone{
+      &-button{
+        display: none;
+      }
+    }
+  }
+  .selection{
+    align-items: center;
+    &__title-big{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    &__title{
+      text-align: center;
+    }
+    &__button{
+      width: 43vw;
+      height: 12vw;
+    }
+  }
+}
