@@ -1,0 +1,45 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 91px;
+
+
+  &__icons img {
+    width: 230px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: $font-color-white;
+    line-height: 25px;
+    p{
+      margin: 0;
+    }
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: $font-color-white;
+      text-decoration: none;
+    }
+
+    &-button {
+      font-size: 1.1rem;
+      width: 10vw;
+      height: 2vw;
+    }
+  }
+}
