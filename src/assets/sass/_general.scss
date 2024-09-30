@@ -3,14 +3,16 @@
 @import 'blocks/adventage';
 @import 'blocks/consultation';
 @import 'blocks/forms';
+@import 'blocks/_slider';
 
 
 html{
   font-size: 10px;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 950px;
+  width: 94vw;
   margin: 0 auto;
 }
 

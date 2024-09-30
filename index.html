@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="src/assets/css/bootstrap-reboot.min.css">
     <title>Vite App</title>
 </head>
 <body>
@@ -77,8 +76,9 @@
 </section>
 <section class="consultation">
     <div class="container consultation__container">
-        <h2 class="consultation__title">Получите бесплатную консультацию <br> <span>по подбору пульсометра</span> </h2>
-        <p class="consultation__descr">Просто заполните форму заявки <br> <span>и мы перезвоним вам в течении 10 минут</span></p>
+        <h2 class="consultation__title">Получите бесплатную консультацию <br> <span>по подбору пульсометра</span></h2>
+        <p class="consultation__descr">Просто заполните форму заявки <br>
+            <span>и мы перезвоним вам в течении 10 минут</span></p>
         <form action="" class="feed-form">
             <input required name="name" placeholder="Ваше имя" type="text">
             <input required name="phone" placeholder="Ваш телефон" type="tel">
@@ -87,6 +87,27 @@
         </form>
     </div>
 </section>
+<div class="slider">
+    <div class="container">
+        <div class="slider__wrapper">
+            <img src="/icons/slider__btn/slider__btn-left.svg" alt="arrow" class="slider__btn-left">
+            <div class="slider__inner">
+                <div class="slider__item">
+                    <img src="/images/slides/slide_1.png" alt="slide" class="slider__wrapper-img">
+                </div >
+                <div class="slider__item">
+                    <img src="/images/slides/slide_2.png" alt="slide">
+                </div>
+                <div class="slider__item">
+                    <img src="/images/slides/slide_3.png" alt="slide">
+                </div>
+            </div>
+            <img src="/icons/slider__btn/slider__btn-right.svg" alt="arrow" class="slider__btn-right">
+
+        </div>
+        <ul class="slider__dots"></ul>
+    </div>
+</div>
 <script type="module" src="src/main.js"></script>
 </body>
 </html>
