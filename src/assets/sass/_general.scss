@@ -3,7 +3,8 @@
 @import 'blocks/adventage';
 @import 'blocks/consultation';
 @import 'blocks/forms';
-@import 'blocks/_slider';
+@import 'blocks/slider';
+@import "blocks/catalog";
 
 
 html{
@@ -12,7 +13,7 @@ html{
 }
 
 .container {
-  width: 94vw;
+  width: 85vw;
   margin: 0 auto;
 }
 

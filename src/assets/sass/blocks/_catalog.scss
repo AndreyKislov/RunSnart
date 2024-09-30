@@ -1,0 +1,137 @@
+.catalog {
+  font-size: 10px;
+  padding-bottom: 80px;
+
+  &__title {
+    @include title(3em, 400, $color: $font-color-black);
+    margin-bottom: 45px;
+  }
+
+  &__tabs {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 210px);
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 auto 57px auto;
+
+    &-item {
+      padding: 5px 30px;
+      border: 1px solid rgb(0, 0, 0, .5);
+      @include title(1.8em, 400, $color: $font-color-black);
+      transform: skewX(-20deg);
+      width: 210px;
+      cursor: pointer;
+
+      & div {
+        transform: skewX(20deg);
+      }
+
+      &-active {
+        background: $main-color;
+        color: $font-color-white;
+      }
+    }
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: auto;
+    gap: 19px;
+    justify-content: center;
+  }
+}
+
+.card {
+  border: 1px solid rgb(0, 0, 0, .5);
+  padding: 20px 0 20px 0;
+  width: 250px;
+
+  & img {
+    display: block;
+    width: 116px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include title(1.6em, 700, $color: $font-color-black);
+  }
+
+  &__descr {
+    @include title(1.4em, 300, none, $font-color-black);
+  }
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+    text-decoration: underline;
+    @include title(1.4em, 700, $color: $main-color);
+    &-prev{
+
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-price {
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 100%;
+      color: $font-color-black;
+
+      & span {
+        font-weight: 300;
+        font-size: 0.8em;
+        text-decoration: line-through;
+        color: #555;
+      }
+    }
+
+    &-btn {
+      width: 120px;
+      height: 35px;
+    }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  &__inner {
+    transition: 0.5s ease;
+    display: flex;
+
+    &-first, &-second {
+      min-width: 100%;
+    }
+
+    &-second {
+      & li {
+        position: relative;
+        text-align: left;
+        list-style-type: none;
+        margin-top: 5.5px;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: -10px;
+          top: 9px;
+          width: 4px;
+          height: 4px;
+          background: $main-color;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
