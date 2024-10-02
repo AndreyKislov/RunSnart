@@ -1,0 +1,47 @@
+.reviews {
+  padding-bottom: 60px;
+  font-size: 10px;
+
+  &__title {
+    @include title(3em, 700, $color: $font-color-black);
+    margin-bottom: 40px;
+  }
+
+  &__container {
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: start;
+    column-gap: 60px;
+    padding-bottom: 60px;
+    max-width: 48vw;
+    margin: 0 auto;
+    &-img{
+      max-width: 169px;
+    }
+    &-text {
+      &-name {
+        @include title(1.8em, 700, capitalize, $font-color-black);
+        text-align: start;
+      }
+
+      &-achievements {
+        font-weight: 500;
+        font-size: 1.4em;
+        color: #646464;
+      }
+
+      &-review {
+        font-weight: 300;
+        font-size: 1.6em;
+        line-height: 150%;
+        color: $font-color-black;
+        & span{
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}

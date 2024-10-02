@@ -18,5 +18,8 @@
     "> 0.5%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8"
+  }
 }

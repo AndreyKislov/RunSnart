@@ -1,7 +1,8 @@
 import './assets/sass/main.scss';
 import slider from './assets/js/slider.js'
 import {tabs, cardSlide} from './assets/js/tabs.js'
-
+import modal from './assets/js/modal.js'
+import reset from "./assets/js/reset.js";
 document.addEventListener('DOMContentLoaded', () => {
     slider({
         btnPrevSelector: '.slider__btn-left',
@@ -25,7 +26,22 @@ document.addEventListener('DOMContentLoaded', () => {
             containerClass: '.catalog__grid-container',
             cardLinkNext: '.card__link-next',
             cardLinkPrev: '.card__link-prev',
-            pagesSelector: '.card__inner'
+            pagesSelector: '.card__inner',
 
-    })
+    });
+
+    modal(
+        {
+            modalClass: '.modal',
+            dataConsultation: 'data-target="consultation"',
+            consultationModalId: 'consultation',
+            dataOrder: 'data-target="order"',
+            orderModalId: 'order',
+            thanksModalId: 'thanks',
+            productTitleClass: '.card__title',
+            productCardClass: '.card',
+            modalClose: '.modal__close'
+        }
+    );
+    reset();
 })

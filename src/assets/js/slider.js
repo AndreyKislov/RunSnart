@@ -47,7 +47,6 @@ export default function ({btnPrevSelector, btnNextSelector, sliderInnerSelector,
     }
 
     function switchSlide(necessaryIndex) {
-        console.log(necessaryIndex)
         let slideWidth = sliderInner.offsetWidth;
         slideCount = sliderInner.childElementCount;
         currentIndex = necessaryIndex;

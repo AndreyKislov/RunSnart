@@ -4,6 +4,14 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .reviews{
+    &__item{
+      max-width: none;
+    }
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1100px) {
   .logo {
     &__phone {
@@ -124,7 +132,17 @@
       }
     }
   }
+  .reviews {
+    &__item {
+      column-gap: 8vw;
+
+      &-img {
+        width: 12vw;
+      }
+    }
+  }
 }
+
 
 @media(max-width: 580px) {
   .logo {
@@ -232,6 +250,18 @@
   .catalog {
     &__title{
       font-size: 2.5em
+    }
+  }
+  .modal{
+    &__close{
+      top: 0;
+      right: 16px;
+    }
+    &__wrapper{
+      width: 90vw;
+    }
+    & .feed-form input{
+      width: 90%;
     }
   }
 }

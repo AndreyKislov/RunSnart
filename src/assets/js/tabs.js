@@ -1,4 +1,8 @@
 export function tabs({containerClass, activeTabClass, tabClass, cardClass, hiddenClass, pagesSelector}) {
+    if (!containerClass || !activeTabClass || !tabClass || !cardClass || !hiddenClass || !pagesSelector) {
+        console.error('Один или несколько селекторов не найдены.');
+        return;
+    }
     const tabs = document.querySelectorAll(tabClass),
         tabsParent = document.querySelector(containerClass),
         cards = document.querySelectorAll(cardClass),
@@ -31,10 +35,11 @@ export function tabs({containerClass, activeTabClass, tabClass, cardClass, hidde
             showElems(target);
         }
     }
-    function slideToStart(pagesSelector){
+
+    function slideToStart(pagesSelector) {
         cards.forEach(card => {
             const pages = card.querySelector(pagesSelector);
-            if(pages)
+            if (pages)
                 pages.style.transform = `translateX(0px)`;
         })
     }

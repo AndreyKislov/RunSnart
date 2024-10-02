@@ -5,12 +5,16 @@
 @import 'blocks/forms';
 @import 'blocks/slider';
 @import "blocks/catalog";
+@import "blocks/reviews";
+@import "blocks/address";
+@import "blocks/modal";
 
 
 html{
   font-size: 10px;
   box-sizing: border-box;
 }
+
 
 .container {
   width: 85vw;
