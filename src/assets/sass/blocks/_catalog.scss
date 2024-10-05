@@ -19,7 +19,7 @@
     &-item {
       padding: 5px 30px;
       border: 1px solid rgb(0, 0, 0, .5);
-      @include title(1.8em, 400, $color: $font-color-black);
+      @include title(1.7em, 400, $color: $font-color-black);
       transform: skewX(-20deg);
       width: 210px;
       cursor: pointer;
