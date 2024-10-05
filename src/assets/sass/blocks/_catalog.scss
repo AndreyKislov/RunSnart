@@ -23,7 +23,10 @@
       transform: skewX(-20deg);
       width: 210px;
       cursor: pointer;
-
+      transition: all .3s ease;
+      &:hover{
+        box-shadow: 0 0 9px 3px $main-color;
+      }
       & div {
         transform: skewX(20deg);
       }
@@ -31,6 +34,9 @@
       &-active {
         background: $main-color;
         color: $font-color-white;
+        &:hover{
+          box-shadow: none;
+        }
       }
     }
   }
@@ -68,8 +74,10 @@
     margin: 0 auto;
     text-decoration: underline;
     @include title(1.4em, 700, $color: $main-color);
-    &-prev{
 
+    &:active {
+      color: $active-color;
+      font-weight: 900;
     }
   }
 

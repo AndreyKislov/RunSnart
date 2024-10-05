@@ -6,7 +6,7 @@
     <title>Vite App</title>
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="logo">
             <div class="logo__icons">
@@ -40,7 +40,7 @@
             <button class="button selection__button" data-target="consultation">заказать консультацию</button>
             <p class="selection__link">
                 или
-                <a href="#">перейти в каталог</a>
+                <a href="#catalog">перейти в каталог</a>
             </p>
         </div>
     </div>
@@ -108,7 +108,7 @@
         <ul class="slider__dots"></ul>
     </div>
 </div>
-<section class="catalog">
+<section class="catalog" id="catalog">
     <div class="container">
         <h2 class="catalog__title">Каталог пульсометров</h2>
         <div class="catalog__tabs">
@@ -409,7 +409,7 @@
     <div class="container">
         <h2 class="reviews__title">Отзывы клиентов</h2>
         <div class="reviews__container">
-            <div class="reviews__item">
+            <div class="reviews__item invisible">
                 <img src="/images/reviews/photo_1.png" alt="image" class="reviews__item-img">
                 <div class="reviews__item-text">
                     <h3 class="reviews__item-text-name">Ирина Иванченко</h3>
@@ -424,7 +424,7 @@
 
                 </div>
             </div>
-            <div class="reviews__item">
+            <div class="reviews__item invisible">
                 <img src="/images/reviews/photo_2.png" alt="image" class="reviews__item-img">
                 <div class="reviews__item-text">
                     <h3 class="reviews__item-text-name">Иван Сёмочкин</h3>
@@ -441,7 +441,7 @@
                     </p>
                 </div>
             </div>
-            <div class="reviews__item">
+            <div class="reviews__item invisible">
                 <img src="/images/reviews/photo_3.png" alt="image" class="reviews__item-img">
                 <div class="reviews__item-text">
                     <h3 class="reviews__item-text-name">Юлия Дашкина</h3>
@@ -493,7 +493,9 @@
         <h2 class="modal__title">Спасибо за вашу заявку</h2>
         <h3 class="modal__title-small">Наш менеджер свяжется с вами в ближайшее время!</h3>
     </div>
-
+</div>
+<div class="up invisible">
+    <a href="#header"> <img src="/icons/up_button.svg" alt=""></a>
 </div>
 <script type="module" src="src/main.js"></script>
 </body>

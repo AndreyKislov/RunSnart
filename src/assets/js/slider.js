@@ -4,8 +4,10 @@ export default function ({btnPrevSelector, btnNextSelector, sliderInnerSelector,
         sliderInner = document.querySelector(sliderInnerSelector),
         dots = document.querySelector(dotsSelector);
 
+
     let currentIndex = 0;
     let slideCount = sliderInner.childElementCount;
+    let startX;
 
     if (!prev || !next || !sliderInner) {
         console.error('Один или несколько селекторов не найдены.');
@@ -21,14 +23,14 @@ export default function ({btnPrevSelector, btnNextSelector, sliderInnerSelector,
         switchSlide(--currentIndex);
     });
 
-    dots.addEventListener('click', (e)=>{
+    dots.addEventListener('click', (e) => {
         const target = e.target;
-        if(target.hasAttribute('data-index')){
+        if (target.hasAttribute('data-index')) {
             switchSlide(target.getAttribute('data-index'))
         }
     });
-    window.addEventListener('resize', ()=>{
-       switchSlide(currentIndex);
+    window.addEventListener('resize', () => {
+        switchSlide(currentIndex);
     });
 
     function createDots(slideCount, currentIndex = 0) {
@@ -59,4 +61,20 @@ export default function ({btnPrevSelector, btnNextSelector, sliderInnerSelector,
         sliderInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
         createDots(slideCount, currentIndex);
     }
+
+
+    sliderInner.addEventListener('touchend', (e) => {
+        console.log(e)
+        const dif = e.changedTouches[0].clientX - startX;
+            if(dif > 50){
+                console.log(dif)
+                switchSlide(--currentIndex)
+            } else if(dif < 0 && dif < -50) {
+                switchSlide(++currentIndex)
+                console.log(dif)
+            }
+        });
+    sliderInner.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    })
 }

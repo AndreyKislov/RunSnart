@@ -3,6 +3,9 @@ import slider from './assets/js/slider.js'
 import {tabs, cardSlide} from './assets/js/tabs.js'
 import modal from './assets/js/modal.js'
 import reset from "./assets/js/reset.js";
+import up_scroll from "./assets/js/up_scroll.js";
+import appearanceAnimation from "./assets/js/appearanceAnimation.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     slider({
         btnPrevSelector: '.slider__btn-left',
@@ -44,4 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
     reset();
+
+    up_scroll(".up");
+
+    appearanceAnimation({
+        sectionClass: '.reviews',
+        itemClass: '.reviews__item'
+    });
 })
